@@ -34,46 +34,46 @@ const convertWeight = (unit, value) => {
     let ounces;
     let pounds;
 
-    let convertedArray = {}
+    let convertedObject = {}
 
     if (unit === 'pounds') {
         kg = value / 2.2046
         grams = value / 0.0022046
         ounces = value * 16
 
-        convertedArray.kg = kg
-        convertedArray.grams = grams
-        convertedArray.ounces = ounces
+        convertedObject.kg = kg
+        convertedObject.grams = grams
+        convertedObject.ounces = ounces
 
     } else if (unit === 'grams') {
         kg = value / 1000
         ounces = value / 28.35
         pounds = value / 454
 
-        convertedArray.kg = kg
-        convertedArray.ounces = ounces
-        convertedArray.pounds = pounds
+        convertedObject.kg = kg
+        convertedObject.ounces = ounces
+        convertedObject.pounds = pounds
 
     } else if (unit === 'ounces') {
         kg = value / 35.274
         grams = value * 28.35
         pounds = value / 16
 
-        convertedArray.kg = kg
-        convertedArray.grams = grams
-        convertedArray.pounds = pounds
+        convertedObject.kg = kg
+        convertedObject.grams = grams
+        convertedObject.pounds = pounds
 
     } else if (unit === 'kilograms') {
         grams = value * 1000
         ounces = value * 35.274
         pounds = value * 2.2046
 
-        convertedArray.grams = grams
-        convertedArray.ounces = ounces
-        convertedArray.pounds = pounds
+        convertedObject.grams = grams
+        convertedObject.ounces = ounces
+        convertedObject.pounds = pounds
 
     }
-    return convertedArray
+    return convertedObject
 }
 
 function setVisibility(id, bool) {
